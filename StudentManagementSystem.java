@@ -9,9 +9,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class StudentManagementSystem {
+    //储存学生信息和课程信息
     private List<Student> students; // 学生列表
     private List<Course> courses; // 课程列表
 
+    //其他方法可以通过访问 students 和 courses 成员变量来实现对学生和课程的增删改查等操作。
     public StudentManagementSystem() {
         students = new ArrayList<Student>();
         courses = new ArrayList<Course>();
@@ -20,7 +22,7 @@ public class StudentManagementSystem {
     // 添加学生
     public void addStudent(String id, String name, String gender, String birth) {
         Student student = new Student(id, name, gender, birth);
-        students.add(student);
+        students.add(student);//将学生信息添加到学生信息列表
     }
 
     // 删除学生
@@ -28,7 +30,7 @@ public class StudentManagementSystem {
         for (int i = 0; i < students.size(); i++) {
             Student student2 = students.get(i);
             if (student2.getId() == targetId) {
-                students.remove(i);
+                students.remove(i);////将学生信息从学生信息列表删除
                 break; // 删除第一个匹配项并停止循环
             }
         }
@@ -470,6 +472,9 @@ public class StudentManagementSystem {
                     break;
             }
         }
+    }
+
+    public void StudentMainInterface() {
     }
 }
 
